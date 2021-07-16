@@ -1,5 +1,10 @@
-const axios = require('axios')
-const url = "https://challenge-bucket-bruno-cw.s3.us-east-2.amazonaws.com/songData.json";
+const aws = require("aws-sdk");
+const s3 = new aws.S3();
+
+const params = {
+    Bucket: "challenge-bucket-bruno-cw",
+    Key: "songData.json"
+}
 
 let response;
 exports.lambdaHandler = async (event, context) => {
@@ -21,8 +26,8 @@ exports.lambdaHandler = async (event, context) => {
 
 const getSongData = async () => {
     try {
-        let response = await axios(url);
-        return response.data;
+        let response = await s3.getObject(params).promise();
+        return response.Body.toString('utf-8');
     } catch (err) {
         console.log(err);
         return err
