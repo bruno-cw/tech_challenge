@@ -1,0 +1,19 @@
+{
+  "name": "get_songs",
+  "version": "1.0.0",
+  "description": "getSongs Function",
+  "main": "app.js",
+  "author": "bruno-cw",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "graphql": "^15.5.1"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
