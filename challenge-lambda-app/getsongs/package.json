@@ -6,18 +6,19 @@
   "author": "bruno-cw",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
     "graphql": "^15.5.1"
   },
   "scripts": {
     "compile": "tsc",
-    "test": "mocha dist/tests/unit/"
+    "test": "tsc && mocha tests/"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.79",
     "@types/chai": "^4.2.21",
+    "@types/graphql": "^14.5.0",
     "@types/mocha": "^8.2.3",
     "@types/node": "^16.3.2",
+    "aws-event-mocks": "0.0.0",
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "typescript": "^4.3.5"

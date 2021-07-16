@@ -131,5 +131,8 @@ $RECYCLE.BIN/
 #DIST folder
 dist/
 
+#compiled files
+**/*.js
+**/*.map
 
 # End of https://www.gitignore.io/api/osx,node,linux,windows
