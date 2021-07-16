@@ -1,15 +1,7 @@
- # iHeartMedia - Music Lab - Code Challenge
-
-Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:
-A landing page, and a page to show data coming from an API.
-
-- Use typescript and graphql for everything where applicable.
-
-- Fork this repo and share the link when you are finished!
-
+ # iHeartMedia - Music Lab - Code Challenge - bruno-cw
 ### UI Checklist
 
-- [ ] Create a React App using functional based components and hooks. No class based components, please.
+- [x] Create a React App using functional based components and hooks. No class based components, please.
 
 - [ ] Create 2 views ( pages ) using React Router.
 
@@ -27,10 +19,4 @@ A landing page, and a page to show data coming from an API.
 
 ### API Checklist
 
-- [ ] Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a **node.js** lambda function to serve the frontend with the data.
-
-- Authentication is not necessary.
-
-- You do not need to deploy or host this anywhere.
-
-- SAM CLI instructions: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
+- [x] Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a **node.js** lambda function to serve the frontend with the data.

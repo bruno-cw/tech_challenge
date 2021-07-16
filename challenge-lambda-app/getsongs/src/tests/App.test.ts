@@ -1,5 +1,5 @@
 import {lambdaHandler} from '../App';
-import { APIGatewayProxyEvent, APIGatewayProxyResult} from "aws-lambda";
+import {APIGatewayProxyResult} from "aws-lambda";
 import {describe, it} from 'mocha'
 import chai from 'chai';
 
