@@ -1,0 +1,10 @@
+Resources:
+  getsongs:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: dist/App.lambdaHandler
+      CodeUri: >-
+        C:/Users/Pichau/Desktop/repo/tech_challenge/challenge-lambda-app/get-songs
+      Runtime: nodejs14.x
+      Environment:
+        Variables: {}
