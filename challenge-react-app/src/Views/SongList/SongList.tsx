@@ -25,6 +25,7 @@ const SongList: React.FC<ISongListProps> = ({ songService }) => {
     songService.getSongs(sort, direction).then((songData: Song[]) => {
       setSongs(songData);
       setLoading(false);
+      setErrorMessage("");
     }).catch((error) => {
       console.log(error);
       setLoading(false);
