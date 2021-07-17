@@ -3,6 +3,7 @@ import Song from "../../Models/Song";
 import { ISongService } from "../../Services/SongService";
 import SongHeader from "./SongHeader/SongHeader";
 import SongRow from "./SongRow/SongRow";
+import Style from "./SongList.module.css"
 
 export interface ISongListProps {
   songService: ISongService;
@@ -27,9 +28,11 @@ const SongList: React.FC<ISongListProps> = ({songService}) => {
     setDirection(direction);
   }
   return (
-    <div>
+    <div className={Style.table}>
       <SongHeader changeSort={changeSort} />
-      {songs.map((song, index) => <SongRow key={index} song={song} />)}
+      <div className={Style.overflow}>
+        {songs.map((song, index) => <SongRow key={index} song={song} />)}
+      </div>
     </div>
   );
 }

@@ -1,4 +1,7 @@
 .songCell {
-    width: 100px;
-    display: inline-block;
+    width: 200px;
+    display: inline-block;    
+    min-width: 200px;
+    padding: 20px 2px;
+    border-bottom: black 0.5px solid
 }

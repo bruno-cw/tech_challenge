@@ -7,11 +7,11 @@
 
 - [x] Create a page that renders a table displaying a list songs coming from the API. Each row is a song, each column is a song attribute. 
 
-  - [ ] Do not use `table` tags
+  - [x] Do not use `table` tags
 
-- [ ] Employ **some** styling but it doesn't have to be much. You can use the styled-components library but do not use any other styling help.
+- [x] Employ **some** styling but it doesn't have to be much. You can use the styled-components library but do not use any other styling help.
 
-- [ ] Allow the user to scroll vertically and horizontally through columns and rows that go off screen.
+- [x] Allow the user to scroll vertically and horizontally through columns and rows that go off screen.
 
 - [x] Allow the user to sort the order of the song rows by the column values.
 

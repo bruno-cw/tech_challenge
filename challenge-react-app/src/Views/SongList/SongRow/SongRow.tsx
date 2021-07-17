@@ -1,7 +1,7 @@
 import React from "react";
 import Song from "../../../Models/Song";
 import SongCell from "../SongCell/SongCell";
-
+import Style from "./SongRow.module.css";
 export interface ISongRowProps {
   song: Song;
 }
@@ -9,7 +9,7 @@ export interface ISongRowProps {
 
 const SongRow: React.FC<ISongRowProps> = ({song}) => {
   return (
-    <>
+    <div className={Style.row}>
       <SongCell>{song.song}</SongCell>
       <SongCell>{song.artist}</SongCell>
       <SongCell>{song.playCount}</SongCell>
@@ -30,7 +30,7 @@ const SongRow: React.FC<ISongRowProps> = ({song}) => {
       <SongCell>{song.metricN}</SongCell>
       <SongCell>{song.metricO}</SongCell>
       <SongCell>{song.metricP}</SongCell>
-    </>
+    </div>
   );
 }
 

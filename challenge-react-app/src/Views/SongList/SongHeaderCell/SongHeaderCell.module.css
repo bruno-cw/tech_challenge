@@ -1,4 +1,14 @@
 .headerCell {
-    width: 100px;
-    display: inline-block;
+    width: 200px;
+    display: inline-block;    
+    min-width: 200px;    
+    background-color: #c0002a;
+    color: white;
+    padding: 30px 2px;
+}
+
+.headerCell:hover {
+    cursor:pointer;
+    color: #c0002a;
+    background-color: white;
 }

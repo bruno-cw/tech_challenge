@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import SongService from "./Services/SongService";
 import Home from "./Views/Home/Home";
+import Logo from "./Views/Logo/Logo";
 import SongList from "./Views/SongList/SongList";
 
 export default function App() {
@@ -16,10 +17,10 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/"><Logo/></Link>
             </li>
-            <li>
-              <Link to="/songs">Songs</Link>
+            <li className="dashboard-link">
+              <Link to="/songs">Dashboard</Link>
             </li>
           </ul>
         </nav>
