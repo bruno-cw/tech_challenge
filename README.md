@@ -1,11 +1,10 @@
  # iHeartMedia - Music Lab - Code Challenge - bruno-cw
 
  ## Usage
-
  ### API (local):
 ```
-cd challenge-lambda-app
-cd getsongs
+cd challenge-lambda-app/getsongs
+npm install
 tsc
 cd ..
 sam local start-api
@@ -14,7 +13,23 @@ sam local start-api
  ### React App:
 ```
 cd challenge-react-app
+npm install
 npm start
+```
+
+ ## Testing
+ ### API (local):
+```
+cd challenge-lambda-app/getsongs
+npm install
+npm test
+```
+
+ ### React App:
+```
+cd challenge-react-app
+npm install
+npm test
 ```
 ## Checklist
 ### UI Checklist
