@@ -21,17 +21,17 @@ const SongList: React.FC<ISongListProps> = ({ songService }) => {
 
   React.useEffect(() => {
     setLoading(true);
+    setErrorMessage("");
     setSongs([]);
     songService.getSongs(sort, direction).then((songData: Song[]) => {
       setSongs(songData);
       setLoading(false);
-      setErrorMessage("");
     }).catch((error) => {
       console.log(error);
       setLoading(false);
       setErrorMessage("Error loading data!")
     })
-  }, [songService, direction, sort, setLoading])
+  }, [songService, direction, sort, setLoading, setErrorMessage])
 
   const changeSort = (sort: string, direction: "asc" | "desc") => {
     setSort(sort);
