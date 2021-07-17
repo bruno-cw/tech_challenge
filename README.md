@@ -1,4 +1,22 @@
  # iHeartMedia - Music Lab - Code Challenge - bruno-cw
+
+ ## Usage
+
+ ### API (local):
+```
+cd challenge-lambda-app
+cd getsongs
+tsc
+cd ..
+sam local start-api
+```
+
+ ### React App:
+```
+cd challenge-react-app
+npm start
+```
+## Checklist
 ### UI Checklist
 
 - [x] Create a React App using functional based components and hooks. No class based components, please.

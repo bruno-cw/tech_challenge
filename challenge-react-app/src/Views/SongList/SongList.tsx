@@ -38,13 +38,11 @@ const SongList: React.FC<ISongListProps> = ({ songService }) => {
   }
   return (
     <div className={Style.table}>
-      {!loading && !errorMessage &&
-        <>
           <SongHeader changeSort={changeSort} />
+      {!loading && !errorMessage &&
           <div className={Style.overflow}>
             {songs.map((song, index) => <SongRow key={index} song={song} />)}
           </div>
-        </>
       }
 
       { loading &&
