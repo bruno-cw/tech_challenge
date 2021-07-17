@@ -30,6 +30,10 @@ const getSongData = async (sort: string, direction : string) : Promise<object> =
         if (direction !== "asc" && direction !== "desc"){
             throw "Invalid Direction"
         }
+
+        if (sort === "songReleaseDate"){
+            return songData.sort((a: any, b: any) =>  (Date.parse(a[sort]) > Date.parse(b[sort])) ? (direction == "asc"? 1 : -1) : (direction == "asc"? -1 : 1));
+        }
         return songData.sort((a: any, b: any) => (a[sort] > b[sort]) ? (direction == "asc"? 1 : -1) : (direction == "asc"? -1 : 1));
     } catch (err) {
         console.log(err);
