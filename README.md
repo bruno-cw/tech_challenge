@@ -1,26 +1,33 @@
  # iHeartMedia - Music Lab - Code Challenge - bruno-cw
 
- ## Usage
- ### API (local):
+ ## Usage Instructions
+ ### 1- Start up API locally (requires SAM CLI to run) on port 3000:
 ```
-cd challenge-lambda-app/getsongs
+cd challenge-lambda-app
+cd getsongs
 npm install
 tsc
 cd ..
 sam local start-api
+
 ```
 
- ### React App:
+
+ ### 2- Start up React App on port 3001:
 ```
 cd challenge-react-app
 npm install
 npm start
-```
 
- ## Testing
- ### API (local):
+# Will prompt the following message:
+# ? Something is already running on port 3000.
+# Would you like to run the app on another port instead? » YES
 ```
-cd challenge-lambda-app/getsongs
+ ## Testing
+ ### API:
+```
+cd challenge-lambda-app
+cd getsongs
 npm install
 npm test
 ```
