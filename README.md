@@ -1,7 +1,17 @@
  # iHeartMedia - Music Lab - Code Challenge - bruno-cw
 
  ## Usage Instructions
- ### 1- Start up API locally (requires SAM CLI to run) on port 3000:
+
+ ### 1- Install AWS SAM CLI
+
+ ### 2- Configure it with your keys ( add a new `credentials` file in the `~/.aws` directory on Linux, or `%userprofile%\.aws` on Windows ) with the following content:
+ ```
+[default]
+aws_access_key_id={your_access_key}
+aws_secret_access_key={your_secret_access_key}
+
+ ```
+ ### 3- Start up API locally on port 3000:
 ```
 cd challenge-lambda-app
 cd getsongs
@@ -11,9 +21,7 @@ cd ..
 sam local start-api
 
 ```
-
-
- ### 2- Start up React App on port 3001:
+ ### 4- Start up React App on port 3001:
 ```
 cd challenge-react-app
 npm install
