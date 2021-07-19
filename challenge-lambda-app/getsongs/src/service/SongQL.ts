@@ -6,17 +6,20 @@ import {
     GraphQLString,
     GraphQLList,
     GraphQLInt,
+    GraphQLFieldResolver,
 } from 'graphql';
 
 const s3 = new aws.S3();
 const params : aws.S3.GetObjectRequest = {
-    Bucket: "challenge-bucket-bruno-cw",
-    Key: "songData.json"
+    Bucket: process.env.BUCKET_NAME || "",
+    Key: process.env.BUCKET_KEY || ""
 }
-
 
 const getSongData = async (sort: string, direction : string) : Promise<object> => {
     try {
+        if (params.Bucket == "" || params.Key == ""){
+            throw "Invalid Bucket and Key parameters!"
+        }
         let response = await s3.getObject(params).promise();
         if (!response.Body) {
             throw "Failed to get song data!"
@@ -67,7 +70,7 @@ const Song = new GraphQLObjectType({
     }
 })
 
-export const GetSongs = new GraphQLSchema({
+export const GetSongs = (customResolver? : GraphQLFieldResolver<any, any> | null) => new GraphQLSchema({
     query: new GraphQLObjectType({
         name: 'Query',
         fields: {
@@ -77,11 +80,11 @@ export const GetSongs = new GraphQLSchema({
                     sort: { type: GraphQLString },
                     direction: { type: GraphQLString }
                 },
-                resolve : (obj, args, context, info) => {
+                resolve : customResolver || ((obj, args, context, info) => {
                     let sort : string = args.sort;
                     let direction : string = args.direction;
                     return getSongData(sort,direction);
-                },
+                }),
             },
         },
     }),

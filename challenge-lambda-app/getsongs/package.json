@@ -6,6 +6,7 @@
   "author": "bruno-cw",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.948.0",
     "graphql": "^15.5.1"
   },
   "scripts": {
